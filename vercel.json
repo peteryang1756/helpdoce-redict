@@ -3,8 +3,12 @@
     {
       "source": "/article/5-contact-email",
       "destination": "https://ssangyongsports.eu.org/docs/contact/email"
-    }
+    },
 {
+      "source": "/article/6-contacy-form",
+      "destination": "https://ssangyongsports.eu.org/docs/contact/form"
+    },
+    {
       "source": "/article/8-whenreply",
       "destination": "https://ssangyongsports.eu.org/docs/contact/email"
     }
