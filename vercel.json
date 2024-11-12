@@ -12,6 +12,10 @@
       "source": "/article/4-check-help",
       "destination": "https://ssangyongsports.eu.org/docs/contact/check"
     },
+{
+      "source": "/article/7-nreply",
+      "destination": "https://ssangyongsports.eu.org/docs/contact/nreply"
+    },
     {
       "source": "/article/8-whenreply",
       "destination": "https://ssangyongsports.eu.org/docs/contact/speed"
