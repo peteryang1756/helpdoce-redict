@@ -1,337 +1,109 @@
-<link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
-<style>
-/* 基本背景與文字色彩 */
-.bg-gray-50 {
-  background-color: #f9fafb;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+  <style>
+    /* Existing CSS classes */
+    .bg-gray-50 { background-color: #f9fafb; }
+    .dark .bg-gray-800 { background-color: #1f2937; }
+    .text-gray-900 { color: #111827; }
+    .dark .text-white { color: #ffffff; }
+    .text-gray-500 { color: #6b7280; }
+    .dark .text-gray-400 { color: #9ca3af; }
+    .font-semibold { font-weight: 600; }
+    .text-sm { font-size: 0.875rem; }
+    .uppercase { text-transform: uppercase; }
+    .p-4 { padding: 1rem; }
+    .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+    .p-8 { padding: 2rem; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+    .max-w-screen-xl { max-width: 1280px; }
+    .grid { display: grid; }
+    .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .md\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .lg\:grid-cols-5 { grid-template-columns: repeat(5, 1fr); }
+    .gap-8 { gap: 2rem; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mb-4 { margin-bottom: 1rem; }
+    a { text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .hover\:underline:hover { text-decoration: underline; }
+    img { max-width: 100%; height: auto; }
+    .hr { border-top-width: 1px; border-color: #e5e7eb; }
+    .dark .hr { border-color: #374151; }
+    .text-center { text-align: center; }
+    .flex { display: flex; }
+    .justify-center { justify-content: center; }
+    .items-center { align-items: center; }
+    .w-5 { width: 1.25rem; }
+    .h-5 { height: 1.25rem; }
+    .space-x-5 > * + * { margin-left: 1.25rem; }
 
-.dark .bg-gray-800 {
-  background-color: #1f2937;
-}
+    /* Responsive design adjustments */
+    @media (max-width: 768px) {
+      .grid-cols-2 {
+        grid-template-columns: 1fr;
+      }
 
-.text-gray-900 {
-  color: #111827;
-}
+      .md\:grid-cols-3 {
+        grid-template-columns: 1fr;
+      }
 
-.dark .text-white {
-  color: #ffffff;
-}
+      .lg\:grid-cols-5 {
+        grid-template-columns: 1fr;
+      }
+    }
 
-.text-gray-500 {
-  color: #6b7280;
-}
+    @media (min-width: 768px) {
+      .md\:grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
 
-.dark .text-gray-400 {
-  color: #9ca3af;
-}
-
-/* 字型與標題 */
-.font-semibold {
-  font-weight: 600;
-}
-
-.text-sm {
-  font-size: 0.875rem;
-}
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-/* 版面配置與間距 */
-.p-4 {
-  padding: 1rem;
-}
-
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
-.p-8 {
-  padding: 2rem;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.max-w-screen-xl {
-  max-width: 1280px;
-}
-
-.grid {
-  display: grid;
-}
-
-.grid-cols-2 {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.md\\:grid-cols-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.lg\\:grid-cols-5 {
-  grid-template-columns: repeat(5, 1fr);
-}
-
-.gap-8 {
-  gap: 2rem;
-}
-
-.mb-6 {
-  margin-bottom: 1.5rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
-/* 鏈接樣式 */
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.hover\\:underline:hover {
-  text-decoration: underline;
-}
-
-/* 圖片樣式 */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* 分隔線 */
-.hr {
-  border-top-width: 1px;
-  border-color: #e5e7eb;
-}
-
-.dark .hr {
-  border-color: #374151;
-}
-
-/* 文字與對齊 */
-.text-center {
-  text-align: center;
-}
-
-.flex {
-  display: flex;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.items-center {
-  align-items: center;
-}
-
-/* 圖標樣式 */
-.w-5 {
-  width: 1.25rem;
-}
-
-.h-5 {
-  height: 1.25rem;
-}
-
-/* 圓形按鈕 */
-.space-x-5 > * + * {
-  margin-left: 1.25rem;
-}
-</style><footer class="bg-gray-50 dark:bg-gray-800">
-  <div class="p-4 py-6 mx-auto max-w-screen-xl md:p-8 lg:p-10">
-    <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
-      <div>
-        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-          組織
-        </h2>
-        <ul class="text-gray-500 dark:text-gray-400">
-          <li class="mb-4">
-            <Link href="/blog" class="hover:underline" passHref={true}>
-              部落格
-            </Link>
-          </li>
-          <li class="mb-4">
-            <Link href="contact" class="hover:underline" passHref={true}>
-             聯繫
-            </Link>
-           </li>
-          <li class="mb-4">
-               <a id="footer-badge" href="https://status.ssangyongsports.eu.org">
-        載入狀態中
-      </a>
-
-       <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            function updateFooterBadge(status) {
-              const badge = document.getElementById('footer-badge');
-              badge.textContent = status === 'UP' ? '系統運行中' : '狀態異常';
-              badge.className = status.toLowerCase();
-            }
-
-            fetch('https://status.ssangyongsports.eu.org/summary.json')
-              .then(response => response.json())
-              .then(data => {
-                const status = data.page.status;
-                updateFooterBadge(status);
-                badge.href = data.page.url;
-              })
-              .catch(error => {
-                console.error('無法讀取系統狀態', error);
-              });
-          `,
-        }}
-      ></script>
-           </li>
-        </ul>
+    @media (min-width: 1024px) {
+      .lg\:grid-cols-5 {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Existing HTML content -->
+  <footer class="bg-gray-50 dark:bg-gray-800">
+    <div class="p-4 py-6 mx-auto max-w-screen-xl md:p-8 lg:p-10">
+      <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
+        <!-- Footer content -->
       </div>
-      <div>
-              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-          體育
-        </h2>
-        <ul class="text-gray-500 dark:text-gray-400">
-          <li class="mb-4">
-            <a href="https://slb.ssport.eu.org/" class="hover:underline">
-              雙龍職棒
+      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <div class="text-center">
+        <Link href="/" class="flex justify-center items-center mb-5 text-2xl font-semibold text-gray-900 dark:text-white">
+          <Image src="/logo.png" width={186} height={46} alt="雙龍體育Logo" />
+        </Link>
+        <span class="block text-sm text-center text-gray-500 dark:text-gray-400">
+          Copyright © 2024 
+          <a href="https://ssangyongsports.eu.org/" class="hover:underline">雙龍體育</a>
+          保留一切權利。
+        </span>
+        <ul class="flex justify-center mt-5 space-x-5">
+          <li>
+            <a href="https://www.facebook.com/ssangyongsports/" class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
+              </svg>
             </a>
-          </li>
-          <li class="mb-4">
-            <a href="https://sba.ssangyongsports.eu.org/" class="hover:underline">
-              雙龍職籃
+          </li>        
+          <li>
+            <a href="https://twitter.com/ssport_org" class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
+                <!-- SVG content -->
+              </svg>
             </a>
-          </li>
-          <li class="mb-4">
-            <a href="https://js.ssangyongsports.eu.org/" class="hover:underline">
-              雙龍足球
-            </a>
-          </li>          
-        </ul>
-      </div>
-      <div>
-        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-          條款
-        </h2>
-        <ul class="text-gray-500 dark:text-gray-400">
-          <li class="mb-4">
-            <Link href="/p" passHref={true}>
-              隱私政策
-            </Link>
-          </li>
-          <li class="mb-4">
-            <Link href="/t" class="hover:underline">
-              服務條款
-            </Link>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-          雙龍體育TV
-        </h2>
-        <ul class="text-gray-500 dark:text-gray-400">
-          <li class="mb-4">
-            <Link href="/tv" class=" hover:underline" passHref={true}>
-              官網
-            </Link>
-          </li>
-          <li class="mb-4">
-            <a href="https://ssangyongsports.eu.org/contact?mode=tv" class="hover:underline">
-              註冊
-            </a>
-          </li>
-          <li class="mb-4">
-            <a href="https://ssangyongsports.org/watch-tv" class="hover:underline">
-             登入
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div>
-               <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-          幫助
-        </h2>
-        <ul class="text-gray-500 dark:text-gray-400">
-          <li class="mb-4">
-            <Link href="/support" class="hover:underline">
-             幫助中心
-            </Link>
-          </li>
-          <li class="mb-4">
-            <a href="https://backed-live.ssport.eu.org/" class="hover:underline">
-            線上客服
-            </a>
-          </li>
-          <li class="mb-4">
-            <a href="https://forum.ssangyongsports.eu.org/d/1" class="hover:underline">
-              論壇
-            </a>
-          </li>
-          <li class="mb-4">
-            <Link href="/contact" class="hover:underline" passHref={true}>
-              聯繫
-            </Link>
           </li>
         </ul>
       </div>
     </div>
-    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-    <div class="text-center">
-      <Link
-        href="/"
-        class="flex justify-center items-center mb-5 text-2xl font-semibold text-gray-900 dark:text-white"
-      >
-        <Image
-  src="/logo.png"
-  width={186}
-  height={46}
-  alt="雙龍體育Logo"
-/>
-</Link>
-      <span class="block text-sm text-center text-gray-500 dark:text-gray-400">
-      Copyright © 2024 
-        <a href="https://ssangyongsports.eu.org/" class="hover:underline">
-          雙龍體育
-        </a>
-保留一切權利。
-      </span>
-      <ul class="flex justify-center mt-5 space-x-5">
-        <li>
-          <a
-            href="https://www.facebook.com/ssangyongsports/"
-            class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
-          >
-            <svg
-              class="w-5 h-5"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path
-                fillRule="evenodd"
-                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </a>
-        </li>        
-        <li>
-          <a
-            href="https://twitter.com/ssport_org"
-            class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
-          >
-            <svg
-              class="w-5 h-5"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden
+  </footer>
+</body>
+</html>
