@@ -5,68 +5,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
   <style>
-    /* Existing CSS classes */
-    .bg-gray-50 { background-color: #f9fafb; }
-    .dark .bg-gray-800 { background-color: #1f2937; }
-    .text-gray-900 { color: #111827; }
-    .dark .text-white { color: #ffffff; }
-    .text-gray-500 { color: #6b7280; }
-    .dark .text-gray-400 { color: #9ca3af; }
-    .font-semibold { font-weight: 600; }
-    .text-sm { font-size: 0.875rem; }
-    .uppercase { text-transform: uppercase; }
-    .p-4 { padding: 1rem; }
-    .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
-    .p-8 { padding: 2rem; }
-    .mx-auto { margin-left: auto; margin-right: auto; }
-    .max-w-screen-xl { max-width: 1280px; }
-    .grid { display: grid; }
-    .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
-    .md\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
-    .lg\:grid-cols-5 { grid-template-columns: repeat(5, 1fr); }
-    .gap-8 { gap: 2rem; }
-    .mb-6 { margin-bottom: 1.5rem; }
-    .mb-4 { margin-bottom: 1rem; }
-    a { text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .hover\:underline:hover { text-decoration: underline; }
-    img { max-width: 100%; height: auto; }
-    .hr { border-top-width: 1px; border-color: #e5e7eb; }
-    .dark .hr { border-color: #374151; }
-    .text-center { text-align: center; }
-    .flex { display: flex; }
-    .justify-center { justify-content: center; }
-    .items-center { align-items: center; }
-    .w-5 { width: 1.25rem; }
-    .h-5 { height: 1.25rem; }
-    .space-x-5 > * + * { margin-left: 1.25rem; }
-
-    /* Responsive design adjustments */
-    @media (max-width: 768px) {
-      .grid-cols-2 {
-        grid-template-columns: 1fr;
-      }
-
-      .md\:grid-cols-3 {
-        grid-template-columns: 1fr;
-      }
-
-      .lg\:grid-cols-5 {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (min-width: 768px) {
-      .md\:grid-cols-3 {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .lg\:grid-cols-5 {
-        grid-template-columns: repeat(5, 1fr);
-      }
-    }
+    footer {
+  padding: 1rem;
+  background-color: white;
+}
+footer.md\:p-8 {
+  padding: 2rem;
+}
+footer.lg\:p-10 {
+  padding: 2.5rem;
+}
+footer.dark\:bg-gray-800 {
+  background-color: #1f2937; /* 深灰色 */
+}
+footer .text-center {
+  text-align: center;
+}
+footer .mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+footer .max-w-screen-xl {
+  max-width: 1280px;
+}
+footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937; /* 深灰色 */
+}
+footer a.dark\:text-white {
+  color: white;
+}
+footer .my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+footer .text-gray-500 {
+  color: #6b7280; /* 中灰色 */
+}
+footer .dark\:text-gray-400 {
+  color: #9ca3af; /* 浅灰色 */
+}
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  color: #1f2937; /* 深灰色 */
+}
+footer ul.dark\:text-white {
+  color: white;
+}
+footer ul li a {
+  margin-right: 1rem;
+  text-decoration: none;
+}
+footer ul li a:hover {
+  text-decoration: underline;
+}
+footer ul li a.md\:mr-6 {
+  margin-right: 1.5rem;
+}
+footer .text-sm {
+  font-size: 0.875rem;
+}
+footer .sm\:text-center {
+  text-align: center;
+}
+footer .hover\:underline:hover {
+  text-decoration: underline;
+}
   </style>
 </head>
 <body>
